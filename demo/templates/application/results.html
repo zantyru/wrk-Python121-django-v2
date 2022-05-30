@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Опросы</title>
+</head>
+<body>
+
+    <h1>{{ question.question_text }}</h1>
+    {% for choice in question.choice_set.all %}
+        <li>{{ choice.choice_text }} &mdash; {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+    {% endfor %}
+
+</body>
+</html>
