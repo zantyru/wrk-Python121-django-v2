@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<!DOCTYPE html>{% load static %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'application/style.css' %}">
     <title>Опросы</title>
 </head>
 <body>
+
+    <p><a href="{% url 'homepage:index' %}">На главную</a></p>
 
     {% if latest_question_list %}
         <ul>
